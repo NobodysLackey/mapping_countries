@@ -15,7 +15,7 @@ const App = () => {
   const [countries, setCountries] = useState([])
   const [languages, setLanguages] = useState([])
   const [continents, setContinents] = useState([])
-  const [bonus, setBonus] = useState(false)
+  const [bonus, setBonus] = useState(true)
 
   const sortCountries = (e, option) => {
     e.preventDefault()

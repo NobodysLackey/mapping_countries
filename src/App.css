@@ -54,6 +54,15 @@ button:active {
   outline: 0;
 }
 
+.bonus-bar {
+  border-top: 5px solid #333333;
+  border-bottom: 5px solid #333333;
+}
+
+#bonus-button, #reset-button {
+  margin-bottom: 1vh;
+}
+
 .flex-row {
   display: flex;
   min-height: 100vh;
@@ -112,7 +121,7 @@ h3 {
 .side-info {
   background-color: #00000088;
   color: #fefbf2;
-  padding: 4px 0 4px 0;
+  padding: 4px 0 0 0;
 }
 
 .main {

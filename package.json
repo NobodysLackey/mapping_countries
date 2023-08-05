@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && touch ./dist/CNAME && echo 'mappingcountries.surge.sh/' >> ./dist/CNAME && npx surge --project ./dist --domain 'mappingcountries.surge.sh/'"
   },
   "dependencies": {
     "react": "^18.2.0",

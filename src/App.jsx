@@ -1,5 +1,6 @@
 import './App.css'
 import SideBar from './components/SideBar'
+import AltBar from './components/AltBar'
 import MainContent from './components/MainContent'
 import countriesArray from './countries'
 import {
@@ -14,6 +15,7 @@ const App = () => {
   const [countries, setCountries] = useState([])
   const [languages, setLanguages] = useState([])
   const [continents, setContinents] = useState([])
+  const [bonus, setBonus] = useState(false)
 
   const sortCountries = (e, option) => {
     e.preventDefault()
@@ -99,16 +101,22 @@ const App = () => {
 
   return (
     <div className="flex-row">
-      <SideBar
-        search={search}
-        sortCountries={sortCountries}
-        languages={languages}
-        continents={continents}
-        contFilter={contFilter}
-        langFilter={langFilter}
-        setCountries={setCountries}
-        countriesArray={countriesArray}
-      />
+      {bonus ? (
+        <AltBar bonus={bonus} setBonus={setBonus} />
+      ) : (
+        <SideBar
+          search={search}
+          sortCountries={sortCountries}
+          languages={languages}
+          continents={continents}
+          contFilter={contFilter}
+          langFilter={langFilter}
+          setCountries={setCountries}
+          countriesArray={countriesArray}
+          bonus={bonus}
+          setBonus={setBonus}
+        />
+      )}
       <MainContent countries={countries} />
     </div>
   )
